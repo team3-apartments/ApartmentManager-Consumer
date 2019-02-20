@@ -19,9 +19,4 @@ public class ApartmentManagerReceiver {
 	public void recieveMessage(SentApartmentManager sentApartmentManager) {
 		repo.save(sentApartmentManager);
 	}
-	
-    @JmsListener(destination = "ApartmentManagerQueue", containerFactory = "myFactory")
-    public List<SentApartmentManager> retrieveMessage() {
-    	return repo.findAll();
-    }
 }
