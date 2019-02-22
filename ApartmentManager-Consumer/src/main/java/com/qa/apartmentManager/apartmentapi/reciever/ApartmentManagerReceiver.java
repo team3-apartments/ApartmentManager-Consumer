@@ -1,7 +1,5 @@
 package com.qa.apartmentManager.apartmentapi.reciever;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
