@@ -11,15 +11,15 @@ private Long apartmentId;
 	private int roomNumber;
 	private String studentName;
 	private String intake;
-	private Date startDate;
-	private Date endDate;
+	private String startDate;
+	private String endDate;
 	private String cleanStatus;
 	private boolean occupied; 
 	private boolean ensuite;
 	private String bedStatus;
 	private String notes;
 	
-	public SentApartmentManager(Long apartmentId, int apartmentNumber, String apartmentBuilding, int roomNumber, String studentName, String intake, Date startDate, Date endDate, String cleanStatus, boolean occupied, boolean ensuite, String bedStatus, String notes) {
+	public SentApartmentManager(Long apartmentId, int apartmentNumber, String apartmentBuilding, int roomNumber, String studentName, String intake, String startDate, String endDate, String cleanStatus, boolean occupied, boolean ensuite, String bedStatus, String notes) {
 		this.apartmentNumber = apartmentNumber;
 		this.apartmentBuilding = apartmentBuilding;
 		this.roomNumber =roomNumber;
@@ -86,19 +86,19 @@ private Long apartmentId;
 		this.intake = intake;
 	}
 
-	public Date getStartDate() {
+	public String getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
 
-	public Date getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(Date endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
 
