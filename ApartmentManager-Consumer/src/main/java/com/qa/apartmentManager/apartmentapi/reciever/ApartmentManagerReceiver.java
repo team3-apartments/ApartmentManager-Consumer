@@ -13,8 +13,17 @@ public class ApartmentManagerReceiver {
 	@Autowired
 	private MongoApartmentManagerRepo repo;
 	
+	private static Long staticApartmentId = 1l;
+	
 	@JmsListener(destination = "ApartmentManagerQueue", containerFactory = "myFactory")
 	public void recieveMessage(SentApartmentManager sentApartmentManager) {
+		for(Long i = 1L; i<=repo.findAll().size(); i++) {
+			if ((repo.findById(i) != null)) {
+				staticApartmentId = i+1;
+			}
+		}
+		sentApartmentManager.setApartmentId(staticApartmentId);
 		repo.save(sentApartmentManager);
 	}
+
 }
